@@ -25,7 +25,7 @@ Follow these steps to set up and run your Discord bot.
 * **Node.js (v18.x or higher recommended):** Download and install from [nodejs.org](https://nodejs.org/). This includes npm.  
 * A **Discord Account** and a **Discord Server** where you have permissions to manage channels and invite bots.
 
-### **1\. Discord Bot Setup**
+### **Discord Bot Setup** 🤖
 
 1. **Create a New Application:**  
    * Go to the [Discord Developer Portal](https://discord.com/developers/applications).  
@@ -52,18 +52,14 @@ Follow these steps to set up and run your Discord bot.
    * Enable "Developer Mode".  
    * Right-click on the Discord channel where you want the bot to post updates, and select "Copy ID". This is your DISCORD\_CHANNEL\_ID.
 
-### **2\. Project Setup**
+### **Project Setup** :computer:
 
 1. **Clone this project** 
-    
 
-2. **Initialize Node.js Project:**  
-   `$ npm init \-y`
-
-3. **Install Dependencies:**  
+2. **Install Dependencies:**  
    `$ npm install discord.js rss-parser dotenv`
 
-4. **Create .env File froom .env.example :**  
+3. **Create .env File froom .env.example :**  
    * clone .env.example to .env, then add this variable
     ```
      DISCORD_BOT_TOKEN="YOUR_BOT_TOKEN_HERE"  
@@ -75,7 +71,7 @@ Follow these steps to set up and run your Discord bot.
     * **Replace YOUR\_CHANNEL\_ID\_HERE** with the channel ID you copied from your Discord server.  
     * You can optionally change RSS\_FEED\_URL here if you want to use a different feed.
 
-### **3\. Running the Bot**
+### **Running the Bot** :robot:
 
 Simply run to start bot
 
