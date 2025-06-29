@@ -10,3 +10,5 @@ services:
       - RSS_FEED_URL=https://rss.app/feeds/COiTZRnT26oDqrJf.xml
       - RSS_DELAY=${RSS_DELAY}
     restart: unless-stopped
+    env_file:
+      - stack.env

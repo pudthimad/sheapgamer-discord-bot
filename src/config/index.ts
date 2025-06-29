@@ -1,5 +1,11 @@
-import dotenv from "dotenv";
-dotenv.config();
+try {
+  const dotenv = await import("dotenv");
+  dotenv.config();
+  console.log("Available env vars:", Object.keys(process.env));
+} catch (e) {
+  // ไม่มี dotenv หรือไม่มีไฟล์ .env ก็ไม่เป็นไร
+  console.log("Running without dotenv (using Docker env vars)");
+}
 
 if (!process.env.DISCORD_BOT_TOKEN) {
   throw new Error("DISCORD_BOT_TOKEN is not set");
