@@ -1,17 +1,17 @@
 # ใช้ Node.js official image
-FROM node:18-alpine
+FROM node:latest
 
 # กำหนด working directory
-WORKDIR /app
+WORKDIR /usr/src/bot
 
 # Copy package.json และ package-lock.json ก่อน
-COPY package*.json ./
+COPY package*.json /usr/src/bot
 
 # ติดตั้ง dependencies
 RUN npm install
 
 # Copy source code ทั้งหมด
-COPY . .
+COPY . /usr/src/bot
 
 # Build project
 RUN npm run build
