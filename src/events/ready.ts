@@ -19,6 +19,20 @@ export default async function onReady(client: Client) {
   checkFeed();
 
   console.log(
-    `Started RSS feed check loop every ${RSS_CHECK_INTERVAL_MS / 1000} seconds.`
+    `Started RSS feed check loop every ${formatDuration(RSS_CHECK_INTERVAL_MS)} .`
   );
+}
+
+function formatDuration(ms:number) {
+  const seconds = Math.floor(ms / 1000);
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+
+    const parts = [];
+    if (hrs > 0) parts.push(`${hrs} hours`);
+    if (mins > 0) parts.push(`${mins} minutes`);
+    if (secs > 0 || parts.length === 0) parts.push(`${secs} seconds`);
+
+    return parts.join(" ");
 }
