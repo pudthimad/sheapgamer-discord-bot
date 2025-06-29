@@ -1,0 +1,11 @@
+.git/
+node_modules/*
+!node_modules/@discordjs
+node_modules/@discordjs/*
+!node_modules/@discordjs/ws
+node_modules/@discordjs/ws/*
+!node_modules/@discordjs/ws/dist
+node_modules/@discordjs/ws/dist/*
+!node_modules/@discordjs/ws/dist/index.js
+config/development/
+*.log
