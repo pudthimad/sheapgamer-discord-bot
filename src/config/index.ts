@@ -1,5 +1,5 @@
+import dotenv from "dotenv";
 try {
-  const dotenv = await import("dotenv");
   dotenv.config();
   console.log("Available env vars:", Object.keys(process.env));
 } catch (e) {
