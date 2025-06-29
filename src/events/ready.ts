@@ -19,7 +19,7 @@ export default async function onReady(client: Client) {
   checkFeed();
 
   console.log(
-    `Started RSS feed check loop every ${formatDuration(RSS_CHECK_INTERVAL_MS)} .`
+    `Started RSS feed check loop every ${formatDuration(RSS_CHECK_INTERVAL_MS)}.`
   );
 }
 
