@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 try {
   dotenv.config();
   console.log("Available env vars:", Object.keys(process.env));
+  console.log("DISCORD_BOT_TOKEN:", process.env.DISCORD_BOT_TOKEN)
 } catch (e) {
   // ไม่มี dotenv หรือไม่มีไฟล์ .env ก็ไม่เป็นไร
   console.log("Running without dotenv (using Docker env vars)");
